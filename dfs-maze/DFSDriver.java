@@ -5,6 +5,10 @@ public class DFSDriver
 {
 	public static void main(String args[])
 	{
+		if(args.length != 1){
+			System.out.println("Need to include the path to the maze as an argument!");
+			System.exit(0);
+		}
 		char[][] maze = loadMaze(args[0], 8, 8);
 		Stack ourStack = new Stack();
 		Point startPoint = findStart(maze);
@@ -58,6 +62,7 @@ public class DFSDriver
 				}
 				curX++;
 			}
+			s.close();
 			
 		}catch(Exception e){
 			System.out.println(e);
