@@ -14,7 +14,7 @@ public class DFSDriver
 	public static void dfs(char[][] maze, Point currentPoint, Stack stack){
 		System.out.println(stack);
 		if( maze[currentPoint.x][currentPoint.y] == 'G'){
-			System.out.println("FUCK YEAH MOTHERFUCKER: " + currentPoint);
+			System.out.println("Found goal at: " + currentPoint.toString());
 			return;
 		}
 		maze[currentPoint.x][currentPoint.y] = 'V';
